@@ -1,153 +1,66 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Дни рождения</title>
+    <title>Отправка сообщения</title>
 </head>
-<body>
-	<p>Башкова Анна Дмитреевна - 10 ноября</p>
-	<p>Виногрдов Андрей Викторович - 7 мая</p>
-	<p>Волков Артем Сергеевич - 8 июня</p>
-	<p>Гурьев Илья Сергеевич - 20 апреля</p>
-	<p>Дюжов Егор Сергеевич - 13 марта</p>
-	<p>Евсеева Юлия Максимова - 17 апреля</p>
-	<p>Ежов Иван Максимович - 15 октября</p>
-	<p>Иванова Анна Александрова - 20 декабря</p>
-	<p>Касьян Олеся Владимировна - 20 октября</p>
-	<p>Кузин Георгий Иванович - 22 апреля</p>
-	<p>Кузина Арина Ивановна - 22 апреля</p>
-	<p>Лепайнек Мария Алексеевна - 28 ноября</p>
-	<p>Матвеева Валерия Евгеньева - 28 января</p>
-	<p>Неверов Артем Александрович - 6 апреля</p>
-	<p>Никишина Ксения Евгеньева - 2 сентября</p>
-	<p>Новикова Варвара Дмитреевна - 2 октября</p>
-	<p>Дюжов Егор Сергеевич - 13 марта</p>
-	<p>Овдина Маргарита Игоревна - 23 декабря</p>
-	<p>Осипов Артем Максимович - 5 декабря</p>
-	<p>Очилдеева Зарина Орифовна - 11 октября</p>
-	<p>Петракова София Антоновна - 30 сентября</p>
-	<p>Подлипаев Денис Сергеевич - 28 Июля</p>
-	<p>Поникова Екатерина Алексеевна - 5 августа</p>
-	<p>Савина Маргарита Алексеевна - 9 августа</p>
-	<p>Семенов Олег Сергеевич - 29 ноября</p>
-	<p>Соловьев Степан Владимирович - 2 июля</p>
-	<p>Тимофеев Игорь Алексеевич - 13 декабря</p>
-	<p>Типенков Артем Алексеевич - 14 ноября</p>
-    <div class="blur-container"
-        style="--blur:12vw;">
- 
-    <div class="shape" 
-        style="--path:polygon(50.9% 37.2%, 43.5% 34.7%, 33.6% 26.1%, 39.2% 10.8%, 26.2% 0.0%, 4.8% 6.4%, 0.0% 30.4%, 20.7% 37.2%, 33.4% 26.3%, 43.2% 34.9%, 45.0% 35.6%, 43.6% 46.4%, 37.8% 59.5%, 21.8% 63.2%, 11.7% 76.1%, 22.9% 91.3%, 47.4% 91.3%, 54.0% 79.0%, 38.0% 59.6%, 43.9% 46.4%, 45.2% 35.5%, 50.9% 37.6%, 56.1% 36.8%, 59.8% 47.6%, 70.3% 61.9%, 87.7% 56.0%, 96.4% 37.4%, 88.6% 15.1%, 63.7% 16.7%, 55.2% 33.6%, 55.9% 36.6%, 50.9% 37.2%);"></div>
- 
-    <div class="shape" 
-        style="--path:polygon(50.9% 37.2%, 43.5% 34.7%, 33.6% 26.1%, 39.2% 10.8%, 26.2% 0.0%, 4.8% 6.4%, 0.0% 30.4%, 20.7% 37.2%, 33.4% 26.3%, 43.2% 34.9%, 45.0% 35.6%, 43.6% 46.4%, 37.8% 59.5%, 21.8% 63.2%, 11.7% 76.1%, 22.9% 91.3%, 47.4% 91.3%, 54.0% 79.0%, 38.0% 59.6%, 43.9% 46.4%, 45.2% 35.5%, 50.9% 37.6%, 56.1% 36.8%, 59.8% 47.6%, 70.3% 61.9%, 87.7% 56.0%, 96.4% 37.4%, 88.6% 15.1%, 63.7% 16.7%, 55.2% 33.6%, 55.9% 36.6%, 50.9% 37.2%);
-        --offset:180deg;
-        --speed: 6000ms;
-        --background: linear-gradient( cyan, blue, green, purple, cyan);
-        "></div>
-    </div>
-</body>
-<style>
-* {
-    box-sizing: border-box;
+<style>html,body {
+    height: 100%;
+}
+body {
+    background: #0f3854;
+    background: radial-gradient(ellipse at center,  #0a2e38  0%, #000000 70%);
+    background-size: 100%;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+#clock {
+    font-family: 'Share Tech Mono', monospace;
+    color: #ffffff;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #daf6ff;
+    text-shadow: 0 0 20px rgba(10, 175, 230, 1),  0 0 20px rgba(10, 175, 230, 0);
+
+}
+.break-line {
+    white-space: pre-line;
   }
-  
-  :root {
-    //--background-size: 50vw;
-    --background-size: unquote('min(100vw, 40em)');
-  }
-  
-  html {
-    font-size: calc(100% + 0.5vw);
-  }
-  
-  @media (prefers-reduced-motion: reduce) {
-    * {
-      animation: none !important;
-      transition-duration: 0.001s !important;
-    }
-  }
-  
-  .container {
-    background: linear-gradient(100deg, #402, #006);
-    padding: 2em;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 460 55'%3E%3Cg fill='none' fill-rule='evenodd' stroke='%23fff' stroke-width='7' opacity='.1'%3E%3Cpath d='M-345 34.5s57.5-13.8 115-13.8 115 13.8 115 13.8S-57.5 48.3 0 48.3s115-13.8 115-13.8 57.5-13.8 115-13.8 115 13.8 115 13.8 57.5 13.8 115 13.8 115-13.8 115-13.8'/%3E%3Cpath d='M-345 20.7s57.5-13.8 115-13.8 115 13.8 115 13.8S-57.5 34.5 0 34.5s115-13.8 115-13.8S172.5 6.9 230 6.9s115 13.8 115 13.8 57.5 13.8 115 13.8 115-13.8 115-13.8m-920 27.6s57.5-13.8 115-13.8 115 13.8 115 13.8S-57.5 62.1 0 62.1s115-13.8 115-13.8 57.5-13.8 115-13.8 115 13.8 115 13.8 57.5 13.8 115 13.8 115-13.8 115-13.8'/%3E%3Cpath d='M-345 6.9s57.5-13.8 115-13.8S-115 6.9-115 6.9-57.5 20.7 0 20.7 115 6.9 115 6.9 172.5-6.9 230-6.9 345 6.9 345 6.9s57.5 13.8 115 13.8S575 6.9 575 6.9'/%3E%3Cpath d='M-345-6.9s57.5-13.8 115-13.8S-115-6.9-115-6.9-57.5 6.9 0 6.9 115-6.9 115-6.9s57.5-13.8 115-13.8S345-6.9 345-6.9 402.5 6.9 460 6.9 575-6.9 575-6.9m-920 69s57.5-13.8 115-13.8 115 13.8 115 13.8S-57.5 75.9 0 75.9s115-13.8 115-13.8 57.5-13.8 115-13.8 115 13.8 115 13.8 57.5 13.8 115 13.8 115-13.8 115-13.8'/%3E%3C/g%3E%3C/svg%3E%0A"),
-      linear-gradient(80deg, #202, #006);
-    background-position: 50% 50%;
-    animation: background-move 10s linear infinite;
-    background-size: 100vw auto, 100% 100%;
-    background-size: unquote('max(100vw, 30em)') auto, 100% 100%;
-  }
-  
-  @keyframes background-move {
-    0% { background-position: 0 0, 0 0; }
-    100% { 
-      background-position: 100vw 0, 0 0;
-      background-position: unquote('max(100vw, 40em)')  0, 0 0;
-    }
-  }
-  
-  .input-group {
-    width: 100%;
-    max-width: 20em;
-    display: flex;
-    flex-direction: column;
-    z-index: 2;
-  
-    @supports (mix-blend-mode: darken) {
-      position: relative;
-      mix-blend-mode: lighten;
-  
-      &__label {
-        position: absolute;
-        left: 3em;
-        top: -0.28em;
-        background: #000;
-      }
-    }
-  
-    &__label {
-      padding: 0 0.5em;
-      margin-bottom: 0.5em;
-      text-transform: uppercase;
-      font-size: 0.875em;
-      letter-spacing: 0.1em;
-      color: #ccd;
-      color: rgba(255, 220, 255, 0.6);
-      cursor: pointer;
-    }
-  
-    &__input {
-      color: #fff;
-      font-size: 1.25rem;
-      line-height: 1;
-      border-style: none;
-      outline: none;
-      // height calc line-height + (vertical-padding * 2) + (vertical-border * 2)
-      height: calc(1em + 1.6em + 0.5em);
-      width: 100%;
-      padding: 0.8em 1em;
-      border: 0.25em solid transparent;
-      background-image: linear-gradient(#000, #000),
-        linear-gradient(120deg, #f09 0%, #0ff 50%, #9f0 100%);
-      background-origin: border-box;
-      background-clip: padding-box, border-box;
-      border-radius: 1.8em;
-      background-size: 200% 100%;
-      transition: background-position 0.8s ease-out;
-      
-      &:hover {
-        background-position: 100% 0;
-      }
-  
-      &:focus {
-        outline: 2px dashed #ad2b89;
-        outline-offset: 0.5em;
-      }
-    }
-  }
-</style>
+  </style>
+<body><div id="clock">
+    <p class="break-line">      
+Башкова Анна Дмитреевна - 10 ноября
+Виногрдов Андрей Викторович - 7 мая
+Волков Артем Сергеевич - 8 июня
+Гурьев Илья Сергеевич - 20 апреля
+Дюжов Егор Сергеевич - 13 марта
+Евсеева Юлия Максимова - 17 апреля
+Ежов Иван Максимович - 15 октября
+Иванова Анна Александрова - 20 декабря
+Касьян Олеся Владимировна - 20 октября
+Кузин Георгий Иванович - 22 апреля
+Кузина Арина Ивановна - 22 апреля
+Лепайнек Мария Алексеевна - 28 ноября
+Матвеева Валерия Евгеньева - 28 января
+Неверов Артем Александрович - 6 апреля
+Никишина Ксения Евгеньева - 2 сентября
+Новикова Варвара Дмитреевна - 2 октября
+Дюжов Егор Сергеевич - 13 марта
+Овдина Маргарита Игоревна - 23 декабря
+Осипов Артем Максимович - 5 декабря
+Очилдеева Зарина Орифовна - 11 октября
+Петракова София Антоновна - 30 сентября
+Подлипаев Денис Сергеевич - 28 Июля
+Поникова Екатерина Алексеевна - 5 августа
+Савина Маргарита Алексеевна - 9 августа
+Семенов Олег Сергеевич - 29 ноября
+Соловьев Степан Владимирович - 2 июля
+Тимофеев Игорь Алексеевич - 13 декабря
+Типенков Артем Алексеевич - 14 ноября</p>
+</div></body>
 </html>
+
