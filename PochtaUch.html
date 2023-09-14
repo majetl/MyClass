@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Отправка сообщения</title>
+    <script>
+        function sendMessage() {
+            var inputField = document.getElementById("inputField");
+            var message = inputField.value;
+
+            // Очистить содержимое файла "Message.txt"
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "clear_file.php", true);
+            xhr.send();
+
+            // Добавить сообщение в файл "Message.txt"
+            var xhr2 = new XMLHttpRequest();
+            xhr2.open("POST", "append_to_file.php", true);
+            xhr2.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr2.send("message=" + encodeURIComponent(message));
+
+            // Очистить поле ввода
+            inputField.value = "";
+        }
+    </script>
+</head>
+<body>
+    <label for="inputField">Введите сообщение:</label>
+    <input type="text" id="inputField">
+    <button onclick="sendMessage()">Отправить</button>
+</body>
+</html>
